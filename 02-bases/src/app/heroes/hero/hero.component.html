@@ -1,14 +1,14 @@
-<h1>Batman</h1>
+<h1>{{name}}</h1>
 <dl>
-  <td>FirstName:</td>
-  <dd></dd>
-  <td>LastName:</td>
-  <dd></dd>
+  <td>Name:</td>
+  <dd>{{name}}</dd>
+  <td>Age:</td>
+  <dd>{{age}}</dd>
   <td>Method:</td>
-  <dd></dd>
+  <dd>{{getHeroDescription()}}</dd>
   <td>NameInCaps:</td>
-  <dd></dd>
-
-  <button class="btn btn-primary mx-2">Change Name</button>
-  <button class="btn btn-primary mx-2">Change Age</button>
+  <dd>{{capitalizedName}}</dd>
 </dl>
+
+<button (click)='changeName()' class="btn btn-primary mx-2">Change Name</button>
+<button (click)='changeAge()' class= "btn btn-primary mx-2">Change Age</button>
