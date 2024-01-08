@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-dbz-main-page',
+  selector: 'dbz-main-page',
   templateUrl: './main-page.component.html'
 })
 
