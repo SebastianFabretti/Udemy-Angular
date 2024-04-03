@@ -5,7 +5,7 @@ import { SearchResponse, Gif } from '../interfaces/gifs.interfaces';
 @Injectable({providedIn: 'root'})
 export class GifsService {
 
-  public gifList: Gif[] = []
+  public gifList: Gif[] = [];
 
   private _tagsHistory: string[] = [];
   private apiKey: string = 'R32twIfhNmrrKOyMQAEyhdfExzDUrA9P'
@@ -26,6 +26,11 @@ export class GifsService {
 
     this._tagsHistory.unshift(tag);
     this._tagsHistory = this.tagsHistory.splice(0,10);
+    this.saveLocalStorage();
+  }
+
+  private saveLocalStorage(){
+    localStorage.setItem('history', JSON.stringify(this.tagsHistory))
   }
 
   searchTag(tag: string): void{
